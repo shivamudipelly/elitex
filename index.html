@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elitex</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="images/2.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="logo">EliteX</div>
+        <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#aboutMe">About</a></li>
+              <li><a href="#services">services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu" onclick="navChanger(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </header>
+    <!-- main code of the body starts from here -->
+    <div class="container">
+        <!-- small intro about myself -->
+        <div class="academic">
+            <div class="image">
+                <img src="images/2.png">
+            </div>
+            <div class="header-text">
+                <h3>I'm <span class="name-1">SHIVA MUDIPELLY</span>, a dedicated student at <span class="name-2">Anurag University</span>. Explore my academic journey and 
+                    passion for <span class="name-3">WEB DEVELOPMENT</span> through inspiring projects and experiences.
+                </h3> 
+            </div>
+        </div>
+        <div id="aboutMe">
+                <div class="image imageAbt">
+                    <img src="images/2.png">
+                </div>
+                <div class="head">
+                    <h1>About Me </h1>
+                    <h2> I'm <span class="name-1">SHIVA MUDIPELLY</span>, a second-year B.Tech student majoring in Computer Science Engineering at<span class="name-2"> Anurag University</span>. I'm on a journey of discovery, eager to combine my theoretical knowledge with practical experiences.
+                     I'm driven by a thirst for learning and a desire to make a meaningful impact in the world of technology. In my spare time, I love to explore coding challenges and experiment with cutting-edge tech.
+                     Through this <span class="name-3">portfolio</span>, I invite you to join me on my educational adventure as I dive deeper into the dynamic world of Computer Science Engineering. Let's connect and share our enthusiasm for innovation and growth.
+                    </h2>
+                </div>
+        </div>
+        <div id="services">
+            ̥<h1 class="sub-list"> My Services</h1>
+            <div class="services-list">
+               <div>
+                   <i class="fas fa-code"></i>
+                   <h2>Web Design</h2>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nam facere, obcaecati 
+                       libero, expedita saepe magnam voluptate corporis atque voluptatibus dolores accusamus 
+                       accusantium ducimus temporibus, magni maiores. Eveniet, qui magnam?</p>
+                   <a href="#">learn more</a>
+               </div>
+               <div>
+                   <i class="fa-brands fa-python"></i>
+                   <h2>Python Development</h2>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nam facere, obcaecati 
+                       libero, expedita saepe magnam voluptate corporis atque voluptatibus dolores accusamus 
+                       accusantium ducimus temporibus, magni maiores. Eveniet, qui magnam?</p>
+                       <a href="#">learn more</a>
+               </div>
+               <div>
+                       
+                   <i class="fas fa-file-code"></i>
+                   <h2>App Design</h2>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nam facere, obcaecati 
+                       libero, expedita saepe magnam voluptate corporis atque voluptatibus dolores accusamus 
+                       accusantium ducimus temporibus, magni maiores. Eveniet, qui magnam?</p>
+                   <a href="#">learn more</a>
+               </div>
+            </div>
+        </div>
+        <div id="portfolio">
+            <h1 class="sub-list">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/2.jpg">
+                    <div class="layer">
+                        <h3> rock paper</h3>
+                         <p>This is rock paper game</p>
+                        <a href="rock.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/2.jpg">
+                    <div class="layer">
+                        <h3> app work</h3>
+                         <p>lorem Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Illo aliquam facere, ipsam nisi quos voluptates </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/2.jpg">
+                    <div class="layer">
+                        <h3> app work</h3>
+                         <p>lorem Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Illo aliquam facere, ipsam nisi quos voluptates </p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+        <div id="contact">
+            <h1 class="sub-list">Contact form</h1>
+            <div class="row">
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="name" required>
+                        <input type="email" name="Email" placeholder="enter your email Id" required>
+                        <textarea name="Message" id="" rows="10" placeholder="enter your messge here"></textarea>
+                        <input type="submit" class="btn btn2">
+                    </form>
+                </div>
+                <div class="contact-left">
+                    <p><i class="fa-solid fa-paper-plane"></i> shivamudipally12@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 7013017106</p>
+                    <div class="social-icon">
+                        <a href="https://instagram.com/shivamudipelly" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://twiter.com/shivamudipelly" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://linkedin.com/shivamudipelly" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/shivamudipelly" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a href="" class="btn btn2">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Copyright">
+        Copyright © EliteX . Made with <i class="fa-solid fa-heart" style="color: #eb0000;"></i> by <a href="#contact">shivamudipelly</a>
+    </div>
+
+
+
+
+</body>
+<script src="js/script.js"></script>
+</html>

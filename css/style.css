@@ -1,0 +1,482 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: rgba(255,255,255,0.8);
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+/* -------------------------------- header ------------------------------------- */
+header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    background-color:#0e0202;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+.logo{
+    width: 25%;
+    height: 60px;
+    font-size: 35px;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #ff6600, #ff0066);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+nav{
+    width: 60%;
+    
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav ul li{
+    font-size: 20px;
+    list-style: none;
+    cursor: pointer;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+    font-weight: 600;
+}
+nav ul li a:hover{
+    color: #ff6600;
+}
+.menu{
+    cursor: pointer;
+    display: none;
+    z-index: 1;
+}
+.bar1,.bar2,.bar3{
+    width: 35px;
+    height: 5px;
+    background: #fff;
+    margin: 6px 0;
+    transition: 0.5s;
+}
+.menu.change .bar1{
+    transform: translate(0,11px) rotate(45deg);
+}
+.menu.change .bar2{
+    opacity: 0;
+}
+.menu.change .bar3{
+    transform:translate(0,-11px) rotate(-45deg);
+}
+
+/* css for the body of the page*/
+.container{
+    width: 80%;
+    margin: auto;
+}
+/* ------------------------------------ a small intro about me  css ------------------------ */
+.academic{
+    display: flex;
+}
+.image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image img{
+    height: 600px;
+}
+.header-text{
+    padding: 0 30px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 25px;
+}
+h3 .name-1,h3 .name-3{
+    color: rgb(0, 255, 64);
+    font-size: 38px;
+    line-height: 1.4;
+}
+h3 .name-2{
+    color: #ff0066;
+    font-size: 38px ;
+}
+
+/*------------------------- about me all the information of me -------------------------*/
+#aboutMe{
+    display: flex;
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    width: 60%;
+    padding: 0 20px;
+}
+.header-about h1{
+    font: 30px;
+    font-weight: 600;
+    color: rgb(1, 116, 247);
+    
+}
+.header-about h3{
+    line-height: 200%;
+    letter-spacing: 3px;
+    font: 30px;
+}
+h2 .name-1{
+    color: #ff0066;
+    line-height: 150%;
+}
+h2 .name-2{
+    color: greenyellow;
+    line-height: 150%;
+}
+h2 .name-3{
+    font-size: 30px;
+    color: aqua;
+    line-height: 150%;
+}
+.head h1{
+    color: #05fd68c3;
+}
+.head h2{
+    color: #2230fec3;
+}
+/* ----------------------------services----------------------------- */
+#services{
+    width: 100%;
+    padding: 0 50px; 
+}
+.sub-list{
+    height: 35px;
+    color: #ff6600;
+    text-transform: capitalize;
+}
+.services-list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr); 
+    grid-gap: 50px;
+    padding: 50px 0;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    font-size: 18px;
+    color: aqua;
+    margin-top: 20px;
+    display: inline-block;
+
+}
+.services-list div:hover{
+    background-color: #e1762fdb;
+    transform: translateY(-10px);
+}  
+/* --------------------------------- my portfolio ------------------------------  */
+#portfolio{
+    padding: 0 80px;
+}
+.work-list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin: 50px 0;    
+}
+.work{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.work img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{   
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#262626,rgba(0,0,0,0.6));
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    transition: height 0.5;
+}
+.layer h3{
+    font-size: 30px;
+    font-weight: 600; 
+    text-transform: capitalize;
+}
+.layer p{
+    font-size: 18px;
+    font-weight: 300;
+}
+.layer a{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 50%;
+    color: #121212;
+    background: #fff;
+}
+.layer a:hover{
+    color: #fff;
+    background: #121212;
+}
+.work:hover .layer{
+    height: 100%;
+    opacity: 1;
+}
+.work:hover img{
+    transform: scale(1.1);
+} 
+.btn{
+    width: 250px;
+    display: block;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #000;
+    color: #fff;
+    background-color: #333333;
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.btn:hover{
+    color: #333333;
+    background-color: #fff;
+    border: 2px solid #333333;
+}
+
+   /* -------------------------------------------contact form ----------------------------------------- */
+#contact{
+    padding: 80px 0;
+}
+.row{
+    width: 100%;
+    display: flex;
+}
+.contact-left{
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    flex-direction: column;
+}
+.contact-left p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.contact-left i{
+    font-size: 30px;
+}
+.social-icon i{
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+}
+.social-icon i:hover{
+    border-radius: 50%;
+    color: #1DA1F2;
+    background: #fff;
+}
+.btn2{
+  margin:15px 0;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-right form{
+    width: 60%;
+    margin: auto;
+}
+form input,form textarea{
+    width: 100%;
+    margin: auto;
+    border: 0;
+    outline: none;
+    padding: 15px;
+    margin: 15px;
+    background: #212121;
+    color: white;
+    font-size: 20px;
+    border-radius: 25px;
+    text-align: center;
+}
+/* --------------------------------- Copy right ------------------------------------- */
+.Copyright{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+.copyright i{
+    color: #ff4033;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    /* Add responsive CSS here for screens with a width less than 768px */
+    header{
+        width: 100%;
+    }
+    /* -------------------------------header css  for mobile --------------------*/
+nav{
+    width: 0%;
+    position:fixed; 
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+nav ul{
+    border: 2x solid red;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li{
+    padding: 20px 0;
+    font-size: 30px;
+    opacity: 0;
+}
+
+.mobileNav{/* nav is change to mobileNav on click*/
+    width: 100%;
+}
+.mobileNav ul li{
+    opacity: 1;
+}
+.menu{/* menu container which diplays menu toggle on mobile screen  */
+    display: block;
+    padding: 7px 30px;
+}
+   
+
+
+   /*---------------------------  a small intro about me and css for the mobile screen ---------------------- */
+.image img{
+    height: 500px
+}
+.header-text{
+    font-size: 20px;
+}
+h3 .name-1,h3 .name-3,h3 .name-2{
+    font-size: 24px;
+}
+   
+/*------------------------------------------ this is about me css for the mobile ----------------------------------- */
+.imageAbt{
+    display: none;
+    width: 0;
+}
+.head{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+/*------------------------------------------- css for the services provided by this flatform -------------------------------------*/
+.services-list{
+    grid-template-columns: repeat(1,1fr);
+}
+/* ------------------------------------ css for  Contact form  for mobile screeen ------------------------------------ */
+.row{
+    display: block;
+    flex-direction: row-reverse;
+}
+
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Add responsive CSS here for screens between 768px and 1024px */
+/* ----------------------------------  css for the services list provided for the tablet-------------------------------------*/
+.services-list{
+    grid-template-columns: repeat(2,1fr);
+}
+
+
+}
+
+@media screen and (min-width: 1025px) {
+    /* Add responsive CSS here for screens with a width greater than or equal to 1025px */
+}
+
+/* to get more responsive we need to add 560px and its below */
