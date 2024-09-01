@@ -101,70 +101,65 @@
             </div>
         </div>
         <div id="portfolio">
-            <h1 class="sub-list">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/2.jpg">
-                    <div class="layer">
-                        <h3> rock paper</h3>
-                        <p>This is rock paper game</p>
-                        <a href="rock.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/2.jpg">
-                    <div class="layer">
-                        <h3> app work</h3>
-                        <p>lorem Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Illo aliquam facere, ipsam nisi quos voluptates </p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="images/2.jpg">
-                    <div class="layer">
-                        <h3> app work</h3>
-                        <p>lorem Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Illo aliquam facere, ipsam nisi quos voluptates </p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                    </div>
-                </div>
+            <h1>My Work</h1>
+            <div class="project-list">
+
             </div>
-            <a href="#" class="btn">See more</a>
+            <!-- <a href="#" class="btn">See more</a> -->
         </div>
         <div id="contact">
             <h1>Contact form</h1>
             <div class="row">
                 <div class="contact-right">
                     <form id="contact-form">
-                        <input type="text" name="Name" placeholder="name" required>
-                        <input type="email" name="Email" placeholder="enter your email Id" required>
-                        <textarea name="Message" id="" rows="10" placeholder="enter your messge here"></textarea>
-                        <input type="submit" class="btn btn2">
+                        <div>
+                            <input type="text" name="Name" placeholder="Name">
+                            <div class="error-message" id="name-error">Please enter your name.</div>
+                        </div>
+                        <div>
+                            <input type="text" name="Email" placeholder="Enter your email ID">
+                            <div class="error-message" id="email-error">Please enter a valid email address.</div>
+                        </div>
+                        <div>
+                            <textarea name="Message" rows="10" placeholder="Enter your message here"></textarea>
+                            <div class="error-message" id="message-error">Please enter your message.</div>
+                        </div>
+                        <input type="submit" class="btn btn2" value="Submit">
                     </form>
+                    <div class="submission-status" id="submission-status">
+                        <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C5.37 2 0 7.37 0 14s5.37 12 12 12 12-5.37 12-12S18.63 2 12 2zm-1 17l-6-6 1.41-1.41L11 15.17l7.59-7.59L20 8l-9 9z" />
+                        </svg>
+                    </div>
                 </div>
                 <div class="contact-left">
                     <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:shivamudipally12@gmail.com"
                             style="color: #fff; text-decoration: none;">shivamudipally12@gmail.com</a></p>
                     <p><i class="fa-solid fa-phone"></i> <a href="https://wa.me/917013017106" target="_blank"
                             style="color: #fff; text-decoration: none;">+91 7013017106</a></p>
-                            <div class="social-icon">
-                                <a href="https://www.instagram.com/mudipellyshiva/" target="_blank">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="social-icon-img">
-                                </a>
-                                <a href="https://www.hackerrank.com/profile/shivamudipelly" target="_blank">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png" alt="HackerRank" class="social-icon-img">
-                                </a>
-                                <a href="https://leetcode.com/shivamudipelly" target="_blank">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" class="social-icon-img">
-                                </a>
-                                <a href="https://linkedin.com/shivamudipelly" target="_blank">
-                                    <img src="https://static.vecteezy.com/system/resources/previews/023/986/970/non_2x/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.png" alt="LinkedIn" class="social-icon-img">
-                                </a>
-                                <a href="https://github.com/shivamudipelly" target="_blank">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="social-icon-img">
-                                </a>
-                            </div>
+                    <div class="social-icon">
+                        <a href="https://www.instagram.com/mudipellyshiva/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                                alt="Instagram" class="social-icon-img">
+                        </a>
+                        <a href="https://www.hackerrank.com/profile/shivamudipelly" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png"
+                                alt="HackerRank" class="social-icon-img">
+                        </a>
+                        <a href="https://leetcode.com/shivamudipelly" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                                alt="LeetCode" class="social-icon-img">
+                        </a>
+                        <a href="https://linkedin.com/in/shivamudipelly" target="_blank">
+                            <img src="https://static.vecteezy.com/system/resources/previews/023/986/970/non_2x/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.png"
+                                alt="LinkedIn" class="social-icon-img">
+                        </a>
+                        <a href="https://github.com/shivamudipelly" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                                alt="GitHub" class="social-icon-img">
+                        </a>
+                    </div>
                     <a href="./images/Shiva_Resume.pdf" download="Shiva.pdf" class="btn btn2">Download CV</a>
                 </div>
             </div>
@@ -174,7 +169,7 @@
             Copyright © EliteX . Made with <i class="fa-solid fa-heart" style="color: #eb0000;"></i> by <a
                 href="#contact">shivamudipelly</a>
         </div>
-        
+
 
 
 

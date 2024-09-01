@@ -66,33 +66,124 @@ function navChanger(menu) {
     nav.classList.toggle("mobileNav")
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contact-form');
+    const submissionStatus = document.getElementById('submission-status');
+    const svg = document.getElementById('svg');
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the default form submission
+    function handleInput(event) {
+        const input = event.target;
+        const errorElement = document.getElementById(`${input.name}-error`);
 
-        // Get form data
-        const formData = new FormData(form);
+        if (input.value.trim()) {
+            input.classList.remove('input-error');
+            errorElement.style.display = 'none';
+        }
+    }
 
-        // Create an object from the form data
-        const data = {};
-        formData.forEach((value, key) => {
-            data[key] = value;
-        });
+    function handleChange(event) {
+        const input = event.target;
+        const errorElement = document.getElementById(`${input.name}-error`);
 
-        // Log the data to the console (for debugging)
-        console.log('Form Data:', data);
+        if (input.value.trim() || input.type === 'email') {
+            handleInput(event);
+        }
+    }
 
-        // Here, you can add code to send the data to a server, or handle it as needed
-        // Example: 
-        // fetch('your-server-endpoint', {
-        //     method: 'POST',
-        //     body: JSON.stringify(data),
-        //     headers: { 'Content-Type': 'application/json' }
-        // }).then(response => response.json())
-        //   .then(result => console.log('Success:', result))
-        //   .catch(error => console.error('Error:', error));
+    form.addEventListener('input', handleInput);
+    form.addEventListener('change', handleChange);
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const errorMessages = document.querySelectorAll('.error-message');
+        errorMessages.forEach(msg => msg.style.display = 'none');
+        const inputs = form.querySelectorAll('input, textarea');
+        inputs.forEach(input => input.classList.remove('input-error'));
+
+        let isValid = true;
+
+        const nameInput = form.elements['Name'];
+        if (!nameInput.value.trim()) {
+            showError(nameInput, 'name-error');
+            isValid = false;
+        }
+
+        const emailInput = form.elements['Email'];
+        if (!emailInput.value.trim() || !validateEmail(emailInput.value)) {
+            showError(emailInput, 'email-error');
+            isValid = false;
+        }
+
+        const messageInput = form.elements['Message'];
+        if (!messageInput.value.trim()) {
+            showError(messageInput, 'message-error');
+            isValid = false;
+        }
+
+        if (isValid) {
+            // If form is valid, hide the form and show the submission status
+            form.style.display = "none";
+            svg.style.display = 'flex'; // Ensure the status container is displayed
+            submissionStatus.classList.add('open');
+            // Hide status after 3 seconds
+            setTimeout(() => {
+                submissionStatus.classList.remove('open');
+                submissionStatus.style.display = 'none';
+                form.style.display = 'flex'; // Show the form again
+                form.reset(); // Optionally reset the form
+            }, 3000);
+        }
     });
+
+    function showError(input, errorId) {
+        document.getElementById(errorId).style.display = 'block';
+        input.classList.add('input-error');
+    }
+
+    function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
 });
+
+
+
+/** Porfolio Section code */
+
+const projectList = document.querySelector('.project-list');
+
+const projectItems = [
+    {
+        imageSrc: "../images/bustracking.png",
+        link: "https://bus-tracking-system.vercel.app/",
+        title: "Bus Tracking System",
+        description: "MERN project"
+    },
+    {
+        imageSrc: "../images/default.png",
+        link: "/",
+        title: "Google form Clone",
+        description: "MERN project"
+    },
+    {
+        imageSrc: "../images/cloudclub.png",
+        link: "https://cloudclubau.github.io/cloud/",
+        title: "Cloud club site",
+        description: "Html,Css,Js"
+    },
+];
+
+projectItems.map(projectItem => {
+    projectList.innerHTML += `
+        <div class="project-item">
+            <div class="layer">
+                <a href="${projectItem.link}" target="_blank"><i class="fa-solid fa-eye"></i><p>Live preview</p></a>
+            </div>
+            <img src="${projectItem.imageSrc}" alt="Rock Paper Game">
+            <h3>${projectItem.title}</h3>
+            <p>${projectItem.description}</p>
+        </div>`
+})
+
 
