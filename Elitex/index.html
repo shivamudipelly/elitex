@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elitex</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="images/2.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">EliteX</div>
+        <nav>
+            <ul>
+                <li><a onclick="scrollToSection('skills')">Skills</a></li>
+                <li><a onclick="scrollToSection('portfolio')">Portfolio</a></li>
+                <li><a onclick="scrollToSection('aboutMe')">About me</a></li>
+                <li><a onclick="scrollToSection('contact')">Contact me</a></li>
+            </ul>
+        </nav>
+        <div class="menu" onclick="navChanger(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </header>
+    <!-- main code of the body starts from here -->
+    <div class="container">
+        <!-- small intro about myself -->
+        <div class="academic">
+            <div class="image">
+                <img src="images/shiva.jpg">
+            </div>
+            <div class="header-text">
+                <h3 class="line-1">Hi, I'm Shiva</h3>
+                <h3 class="line-2"> Dedicated web developer.</h3>
+                <h3 class="line-3"> Explore my portfolio to see my passion for creating responsive websites using the
+                    latest technologies.</h3>
+                <a href="#contact" class="btn btn2"
+                    style="margin: 20px auto 0; font-weight: 800;letter-spacing: 2px;">Contact Me</a>
+            </div>
+
+
+        </div>
+        <div id="aboutMe">
+            <div class="about-image">
+                <img src="images/shivaAbout.jpg">
+            </div>
+            <div class="head">
+                <h1>About Me </h1>
+                <div class="intro">
+                    <h2>Hello, I'm Shiva Mudipelly</h2>
+                    <p>A third-year B.Tech student majoring in Computer Science Engineering at Anurag University.
+                        Passionate about merging theoretical knowledge with practical experiences. I thrive on learning
+                        and aspire to make a meaningful impact in technology. In my free time, I enjoy tackling coding
+                        challenges and experimenting with cutting-edge tech. Explore my portfolio and join me on my
+                        journey through the dynamic field of Computer Science Engineering.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Technolgies:</span><br>HTML,CSS,JS<br>React,Mongodb,Express.js,Node.js</li>
+                            <li><span>Version Control Sytsem:</span><br>Git</li>
+                            <li><span>Programming Languages:</span><br>C, Java, Python</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>Bus Tracking System (updating)</span><br>Full stack</li>
+                            <li><span>Portfolio</span><br>Frontend</li>
+                            <li><span>Google Form Clone (working)</span><br>Frontend Completed</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B-Tech</span><br>Anurag University<br>Computer Science Engineering<br>Cgpa: 9.27
+                            </li>
+                            <li><span>Inter</span><br>Geetanjali Junior College <br>MPC <br>Marks: 956</li>
+                            <li><span>Tenth</span><br>Brilliant grammar high School<br>Cgpa: 10</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="skills" class="portfolio-container">
+            <div class="skills-section">
+                <h2>My Skills</h2>
+                <div class="skills" id="skills-container">
+                    <!-- Skills will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+        <div id="portfolio">
+            <h1>My Work</h1>
+            <div class="project-list">
+
+            </div>
+            <!-- <a href="#" class="btn">See more</a> -->
+        </div>
+        <div id="contact">
+            <h1>Contact form</h1>
+            <div class="row">
+                <div class="contact-right">
+                    <form id="contact-form">
+                        <div>
+                            <input type="text" name="Name" placeholder="Name">
+                            <div class="error-message" id="name-error">Please enter your name.</div>
+                        </div>
+                        <div>
+                            <input type="text" name="Email" placeholder="Enter your email ID">
+                            <div class="error-message" id="email-error">Please enter a valid email address.</div>
+                        </div>
+                        <div>
+                            <textarea name="Message" rows="10" placeholder="Enter your message here"></textarea>
+                            <div class="error-message" id="message-error">Please enter your message.</div>
+                        </div>
+                        <input type="submit" class="btn btn2" value="Submit">
+                    </form>
+                    <div class="submission-status" id="submission-status">
+                        <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C5.37 2 0 7.37 0 14s5.37 12 12 12 12-5.37 12-12S18.63 2 12 2zm-1 17l-6-6 1.41-1.41L11 15.17l7.59-7.59L20 8l-9 9z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="contact-left">
+                    <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:shivamudipally12@gmail.com"
+                            style="color: #fff; text-decoration: none;">shivamudipally12@gmail.com</a></p>
+                    <p><i class="fa-solid fa-phone"></i> <a href="https://wa.me/917013017106" target="_blank"
+                            style="color: #fff; text-decoration: none;">+91 7013017106</a></p>
+                    <div class="social-icon">
+                        <a href="https://www.instagram.com/mudipellyshiva/" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                                alt="Instagram" class="social-icon-img">
+                        </a>
+                        <a href="https://www.hackerrank.com/profile/shivamudipelly" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png"
+                                alt="HackerRank" class="social-icon-img">
+                        </a>
+                        <a href="https://leetcode.com/shivamudipelly" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+                                alt="LeetCode" class="social-icon-img">
+                        </a>
+                        <a href="https://linkedin.com/in/shivamudipelly" target="_blank">
+                            <img src="https://static.vecteezy.com/system/resources/previews/023/986/970/non_2x/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.png"
+                                alt="LinkedIn" class="social-icon-img">
+                        </a>
+                        <a href="https://github.com/shivamudipelly" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+                                alt="GitHub" class="social-icon-img">
+                        </a>
+                    </div>
+                    <a href="./images/Shiva_Resume.pdf" download="Shiva.pdf" class="btn btn2">Download CV</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="Copyright">
+            Copyright © EliteX . Made with <i class="fa-solid fa-heart" style="color: #eb0000;"></i> by <a
+                href="#contact">shivamudipelly</a>
+        </div>
+
+
+
+
+</body>
+<script src="js/script.js"></script>
+
+</html>
