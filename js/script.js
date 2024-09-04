@@ -28,6 +28,7 @@ const skillsContainer = document.getElementById('skills-container');
 skills.forEach(skill => {
     const skillBox = document.createElement('div');
     skillBox.classList.add('skill-box', skill.class);
+    skillBox.classList.add('transy', skill.class);
 
     const skillIcon = document.createElement('i');
     skillIcon.className = skill.icon;
@@ -56,15 +57,23 @@ function opentab(tabName) {
 
 
 function scrollToSection(id) {
+    // Scroll to the section smoothly
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+
+    // Close the navbar after clicking a link
+    let nav = document.querySelector('nav');
+    let menu = document.querySelector('.menu');
+    nav.classList.remove('mobileNav');
+    menu.classList.remove('change');
 }
 
 function navChanger(menu) {
-    let nav = document.querySelector('nav')
+    let nav = document.querySelector('nav');
 
-    menu.classList.toggle('change')
-    nav.classList.toggle("mobileNav")
+    menu.classList.toggle('change');
+    nav.classList.toggle('mobileNav');
 }
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contact-form');
@@ -176,7 +185,7 @@ const projectItems = [
 
 projectItems.map(projectItem => {
     projectList.innerHTML += `
-        <div class="project-item">
+        <div class="project-item block">
             <div class="layer">
                 <a href="${projectItem.link}" target="_blank"><i class="fa-solid fa-eye"></i><p>Live preview</p></a>
             </div>
